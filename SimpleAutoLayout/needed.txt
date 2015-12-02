@@ -1,0 +1,16 @@
+
+
+
+
+Autolayout Project
+Phil Wright
+
+Must:
+
+Work in Portrait and Landscape
+
+1. Pin tableview equal to self.view width
+
+2. Pin tableview to self.headerView bottom
+
+3.
