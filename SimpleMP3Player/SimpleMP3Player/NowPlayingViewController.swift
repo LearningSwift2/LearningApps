@@ -26,11 +26,10 @@ class NowPlayingViewController: UIViewController {
         super.viewDidLoad()
         
         // Add listenser
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:"setSongName", name:"SetSongName", object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"updateUI", name:"SongDidUpdate", object:nil)
         
         mp3Player = MP3Player()
         updateUI()
-        setSongName()
     }
     
     // MARK: - Action Methods
@@ -89,27 +88,27 @@ class NowPlayingViewController: UIViewController {
         startTimer()
     }
     
-    func setSongName() {
-        songName.text = mp3Player?.getCurrentTitle()
+    func startTimer() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateProgress"), userInfo: nil, repeats: true)
     }
     
-    func startTimer() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateUI"), userInfo: nil, repeats: true)
+    func updateProgress() {
+        songTime.text = mp3Player?.getCurrentTimeAsString()
+        
+        if let progress = mp3Player?.getProgress() {
+            progressBar.progress = progress
+        }
     }
     
     func updateUI() {
         
         if let player = mp3Player {
+            
+            songName.text = player.getCurrentTitle()
         
             if let imageString = player.getCurrentImageAsString() {
                 let image = UIImage(named: imageString)
                 imageView.image = image
-            }
-            
-            songTime.text = mp3Player?.getCurrentTimeAsString()
-        
-            if let progress = mp3Player?.getProgress() {
-                progressBar.progress = progress
             }
         }
     }

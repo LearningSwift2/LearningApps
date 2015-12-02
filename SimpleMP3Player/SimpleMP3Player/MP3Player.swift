@@ -57,7 +57,7 @@ class MP3Player: NSObject, AVAudioPlayerDelegate {
                 player = try AVAudioPlayer(contentsOfURL: url)
                 player?.delegate = self
                 player?.prepareToPlay()
-                NSNotificationCenter.defaultCenter().postNotificationName("SetSongName", object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("SongDidUpdate", object: nil)
             } catch let error as NSError {
                 print("Audio Error: \(error.localizedDescription)")
                 player = nil
