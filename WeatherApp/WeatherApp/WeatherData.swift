@@ -8,6 +8,20 @@
 
 import UIKit
 
-class WeatherData: NSObject {
-
+struct WeatherData {
+    var precipProbability: String = ""
+    var precipIntensity: String = ""
+    var time: String = ""
+    
+    init(dict: NSDictionary) {
+        if let time = dict["time"] as? NSNumber {
+            self.time = String(time)
+        }
+        if let precipProbability = dict["precipProbability"] as? String {
+            self.precipProbability = precipProbability
+        }
+        if let precipIntensity = dict["precipIntensity"] as? String {
+            self.precipIntensity = precipIntensity
+        }
+    }
 }

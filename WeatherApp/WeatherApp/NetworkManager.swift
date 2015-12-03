@@ -20,6 +20,8 @@ class NetworkManager {
     
     func request(latitude: String = "37.8267", longitude: String = "-122.423") {
  
+        print("Starting Request\n\n")
+        
         let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         let url = NSURL(string: baseURL + latitude + "," + longitude)
@@ -27,32 +29,29 @@ class NetworkManager {
         request.HTTPMethod = "GET"
         
         let task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+        
             let statusCode = (response as! NSHTTPURLResponse).statusCode
             print("URL Session Task Succeeded: HTTP \(statusCode)")
             
-            
-            do {
-                let parsedObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
-                
-                if let dict = parsedObject as? NSDictionary {
-                    let w = Weather(dict: dict)
-                    print(w.latitude)
-                    print(w.longitude)
-                    print(w.time)
-                    print(w.summary)
-                    print(w.minuteSummary)
+            if statusCode == 200 {
+                do {
+                    let parsedObject: AnyObject? = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
                     
-                    for point in w.dataPoints {
-                        print(point.time)
+                    if let dict = parsedObject as? NSDictionary {
+                        let w = Weather(dict: dict)
+
+                        if self.delegate != nil {
+                            self.delegate?.updateWeather(w)
+                        }
                     }
                     
-                    if self.delegate != nil {
-                        self.delegate?.updateWeather(w)
-                    }
+                } catch let error as NSError {
+                    print(error.localizedDescription)
                 }
-                
-            } catch let error as NSError {
-                print(error.localizedDescription)
+            }
+            
+            if statusCode != 200 {
+                print("Error")
             }
             
         })

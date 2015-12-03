@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WeatherDelegate {
 
+    var weather : Weather?
+    var manager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // initialize API
+        self.manager.delegate = self
+        
+        self.manager.request()
+      
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func updateWeather(weather: Weather) {
+        print("The Weather!")
+        
+        self.weather = weather
+        self.weather?.debugDump()
     }
-
-
+    
 }
 
