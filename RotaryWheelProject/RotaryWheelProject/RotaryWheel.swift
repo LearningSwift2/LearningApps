@@ -10,6 +10,16 @@ import UIKit
 import Darwin
 import QuartzCore
 
+/*
+    RotaryProtocol for wheelDidChange event
+*/
+
+protocol RotaryProtocol {
+    func wheelDidChange(newValue: String)
+}
+
+// MARK: - RotaryWheel Control
+
 class RotaryWheel: UIControl {
     
     var sectors = [Sector]()
@@ -18,7 +28,6 @@ class RotaryWheel: UIControl {
     var startTransform : CGAffineTransform = CGAffineTransformIdentity
     var deltaAngle : CGFloat = 0
     var currentSector : Int = 0
-    
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

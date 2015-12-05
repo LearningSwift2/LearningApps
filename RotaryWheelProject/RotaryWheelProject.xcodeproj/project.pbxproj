@@ -13,7 +13,6 @@
 		5E50B59E1C0F6A1B00F3E1F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E50B59D1C0F6A1B00F3E1F0 /* Assets.xcassets */; };
 		5E50B5A11C0F6A1B00F3E1F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E50B59F1C0F6A1B00F3E1F0 /* LaunchScreen.storyboard */; };
 		5E50B5A91C0F6A4C00F3E1F0 /* RotaryWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50B5A81C0F6A4C00F3E1F0 /* RotaryWheel.swift */; };
-		5E50B5AB1C0F6A8400F3E1F0 /* RotaryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50B5AA1C0F6A8400F3E1F0 /* RotaryProtocol.swift */; };
 		5E50B5AD1C0F770100F3E1F0 /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E50B5AC1C0F770100F3E1F0 /* Sector.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		5E50B5A01C0F6A1B00F3E1F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E50B5A21C0F6A1B00F3E1F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E50B5A81C0F6A4C00F3E1F0 /* RotaryWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotaryWheel.swift; sourceTree = "<group>"; };
-		5E50B5AA1C0F6A8400F3E1F0 /* RotaryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotaryProtocol.swift; sourceTree = "<group>"; };
 		5E50B5AC1C0F770100F3E1F0 /* Sector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +62,6 @@
 				5E50B5981C0F6A1B00F3E1F0 /* ViewController.swift */,
 				5E50B5A81C0F6A4C00F3E1F0 /* RotaryWheel.swift */,
 				5E50B5AC1C0F770100F3E1F0 /* Sector.swift */,
-				5E50B5AA1C0F6A8400F3E1F0 /* RotaryProtocol.swift */,
 				5E50B59A1C0F6A1B00F3E1F0 /* Main.storyboard */,
 				5E50B59D1C0F6A1B00F3E1F0 /* Assets.xcassets */,
 				5E50B59F1C0F6A1B00F3E1F0 /* LaunchScreen.storyboard */,
@@ -147,7 +144,6 @@
 				5E50B5991C0F6A1B00F3E1F0 /* ViewController.swift in Sources */,
 				5E50B5AD1C0F770100F3E1F0 /* Sector.swift in Sources */,
 				5E50B5971C0F6A1B00F3E1F0 /* AppDelegate.swift in Sources */,
-				5E50B5AB1C0F6A8400F3E1F0 /* RotaryProtocol.swift in Sources */,
 				5E50B5A91C0F6A4C00F3E1F0 /* RotaryWheel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +294,7 @@
 				5E50B5A71C0F6A1B00F3E1F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
