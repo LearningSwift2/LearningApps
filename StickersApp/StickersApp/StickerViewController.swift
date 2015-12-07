@@ -19,7 +19,7 @@ class StickerViewController: UIViewController {
         super.viewDidLoad()
         
         // Choose Background Image
-        backgroundImageView.image = UIImage(named: "blueBackground")
+        backgroundImageView.image = UIImage(named: "orangeBackground")
     }
 
     
