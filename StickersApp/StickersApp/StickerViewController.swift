@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StickerViewController.swift
 //  StickersApp
 //
 //  Created by Phil Wright on 9/1/15.
@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StickerViewController: UIViewController {
 
     @IBOutlet weak var toolbar: UIToolbar!
     
+    let maxStickers = 2
+    
     var backgroundImageView : UIImageView?
-    var backgroundImageString : String = ""
+    var backgroundImage : UIImage?
     
     var stickersArray : Array<UIImageView> = [];
     
@@ -23,28 +25,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Start With the BlueBackground
-        backgroundImageString = "blueBackground"
+        backgroundImage = UIImage(named: "blueBackground")
         
         updateBackgroundImage()
         
         view.bringSubviewToFront(toolbar)
     }
     
-    override func viewDidAppear(animated: Bool) {
-        
-        self.navigationController?.navigationBarHidden = true
+    override func viewWillAppear(animated: Bool) {
+
+        super.viewWillAppear(animated)
+
+        self.view.bringSubviewToFront(self.toolbar)
         updateBackgroundImage()
-    }
-    
-    @IBAction func exitVC(segue: UIStoryboardSegue) {
-        
-        if segue.identifier == kExitIdentifier {
-            
-            if let controller = segue.sourceViewController as? BackgroundViewController {
-                backgroundImageString = controller.backgroundImageString
-                updateBackgroundImage()
-            }
-        }
     }
     
     func updateBackgroundImage() {
@@ -53,18 +46,23 @@ class ViewController: UIViewController {
         
         backgroundImageView?.removeFromSuperview()
  
-        backgroundImageView = UIImageView(image: UIImage(named:backgroundImageString))
+        backgroundImageView = UIImageView(image: backgroundImage)
         
         backgroundImageView?.frame = view.bounds
         backgroundImageView?.contentMode = .ScaleAspectFill
         view.insertSubview(backgroundImageView!, atIndex: 0)
     }
-
+    
+    @IBAction func chooseBackgroundImage() {
+        
+    }
+    
+   
     @IBAction func actionAddImage(sender: AnyObject) {
         
-        // 1 choose random image between 1 and 7
+        // 1 choose random image between 1 and maximum stickers
         
-        let randomNumber = RandomInt(min: 1, max: kMaxStickers)
+        let randomNumber = RandomInt(min: 1, max: maxStickers)
         
         // 2 Use String Interpolation to get the image
         
@@ -135,16 +133,5 @@ class ViewController: UIViewController {
         return CGPointMake(CGFloat(arc4random_uniform(screenWidth)), CGFloat(arc4random_uniform(screenWidth)))
     }
     
-    // MARK: - Storyboard Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == kChooseBackground {
-            if let controller = segue.sourceViewController as? BackgroundViewController {
-                backgroundImageString = controller.backgroundImageString
-                updateBackgroundImage()
-            }
-
-        }
-    }
 }
 
