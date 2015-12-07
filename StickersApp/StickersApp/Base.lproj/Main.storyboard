@@ -7,7 +7,6 @@
         <!--Sticker ViewController-->
         <scene sceneID="sDt-tD-FED">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RbP-91-6Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Sticker ViewController" id="UMJ-1w-qyH" customClass="StickerViewController" customModule="StickersApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bq3-XW-Qpr"/>
@@ -17,24 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xvt-26-Z9V">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sDu-e9-tYW">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem image="icon-bg" id="f37-hy-174" userLabel="Choose Background">
-                                        <connections>
-                                            <action selector="chooseBackgroundImage" destination="UMJ-1w-qyH" id="6j3-Fm-rLd"/>
-                                        </connections>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="mAi-z6-pQL"/>
                                     <barButtonItem image="icon-plus" id="gea-l5-xFb" userLabel="Add">
                                         <connections>
                                             <action selector="actionAddImage:" destination="UMJ-1w-qyH" id="Vsq-WL-pRN"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem image="icon-minus" id="Uop-2d-CbK" userLabel="Subtract">
-                                        <connections>
-                                            <action selector="actionDeleteImage:" destination="UMJ-1w-qyH" id="BPW-Bd-KrH"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="R89-9D-ekm"/>
@@ -49,23 +42,27 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="xvt-26-Z9V" firstAttribute="height" secondItem="6Na-oe-YRQ" secondAttribute="height" id="4mP-lW-9f1"/>
+                            <constraint firstItem="xvt-26-Z9V" firstAttribute="centerY" secondItem="6Na-oe-YRQ" secondAttribute="centerY" id="Nfh-yd-iHo"/>
+                            <constraint firstItem="xvt-26-Z9V" firstAttribute="width" secondItem="6Na-oe-YRQ" secondAttribute="width" id="X2d-bY-EKf"/>
                             <constraint firstItem="sDu-e9-tYW" firstAttribute="leading" secondItem="6Na-oe-YRQ" secondAttribute="leading" id="fgT-am-Xrb"/>
                             <constraint firstItem="ePk-ig-SpY" firstAttribute="top" secondItem="sDu-e9-tYW" secondAttribute="bottom" id="qhg-83-iwE"/>
+                            <constraint firstItem="xvt-26-Z9V" firstAttribute="centerX" secondItem="6Na-oe-YRQ" secondAttribute="centerX" id="soI-0X-1nr"/>
                             <constraint firstAttribute="trailing" secondItem="sDu-e9-tYW" secondAttribute="trailing" id="wzb-WZ-Axk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="62w-Ex-kkP"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="xvt-26-Z9V" id="MGk-Fn-ydL"/>
                         <outlet property="toolbar" destination="sDu-e9-tYW" id="dif-jA-DSa"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RbP-91-6Pz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5389" y="-5484"/>
         </scene>
     </scenes>
     <resources>
-        <image name="icon-bg" width="32" height="24"/>
-        <image name="icon-minus" width="32" height="32"/>
         <image name="icon-plus" width="32" height="32"/>
     </resources>
 </document>

@@ -11,97 +11,35 @@ import UIKit
 class StickerViewController: UIViewController {
 
     @IBOutlet weak var toolbar: UIToolbar!
-    
-    let maxStickers = 2
-    
-    var backgroundImageView : UIImageView?
-    var backgroundImage : UIImage?
-    
-    var stickersArray : Array<UIImageView> = [];
+    @IBOutlet weak var backgroundImageView: UIImageView!
     
     //MARK: - View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Start With the BlueBackground
-        backgroundImage = UIImage(named: "blueBackground")
-        
-        updateBackgroundImage()
-        
-        view.bringSubviewToFront(toolbar)
+        // Choose Background Image
+        backgroundImageView.image = UIImage(named: "blueBackground")
     }
-    
-    override func viewWillAppear(animated: Bool) {
 
-        super.viewWillAppear(animated)
-
-        self.view.bringSubviewToFront(self.toolbar)
-        updateBackgroundImage()
-    }
     
-    func updateBackgroundImage() {
-        
-        // is there a backgroundImageString available?
-        
-        backgroundImageView?.removeFromSuperview()
- 
-        backgroundImageView = UIImageView(image: backgroundImage)
-        
-        backgroundImageView?.frame = view.bounds
-        backgroundImageView?.contentMode = .ScaleAspectFill
-        view.insertSubview(backgroundImageView!, atIndex: 0)
-    }
-    
-    @IBAction func chooseBackgroundImage() {
-        
-    }
-    
-   
     @IBAction func actionAddImage(sender: AnyObject) {
         
-        // 1 choose random image between 1 and maximum stickers
+        // Create a new Image
+        let imageView = PinchZoomImageView(image: UIImage(named: "1"))
         
-        let randomNumber = RandomInt(min: 1, max: maxStickers)
+        // Create Random Origin Point
+        let pointX = CGFloat(arc4random_uniform(UInt32(self.view.frame.size.width / 2)))
         
-        // 2 Use String Interpolation to get the image
+        var frame = imageView.frame
+        frame.origin.x = pointX
+        imageView.frame = frame
         
-        let imageView = PinchZoomImageView(image: UIImage(named: "\(randomNumber)"))
-        
-        // 3
-        imageView.frame.origin = randomOriginPoint()
-        
-        // 3
+        // Add to the subview
         view.addSubview(imageView)
         
-        // 4
-        stickersArray.append(imageView)
-        
+        // Ensure Toolbar is on top
         view.bringSubviewToFront(toolbar)
-    }
-    
-    @IBAction func actionDeleteImage(sender: AnyObject) {
-
-        // 1
-        let stickersCount = stickersArray.count
-        
-        if(stickersCount > 0) {
-            
-            // 2
-            if let imageView = stickersArray[0] as UIImageView? {
-                imageView.removeFromSuperview()
-                stickersArray.removeFirst()
-            }
-        }
-        
-    }
-    
-    // MARK: - Better Random Number Generator
-    
-    func RandomInt(min min: Int, max: Int) -> Int {
-        
-        if max < min { return min }
-        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
     }
     
     // MARK: - Save to Photo Gallery
@@ -122,15 +60,10 @@ class StickerViewController: UIViewController {
         
         toolbar.hidden = false
         
-        let alertController = UIAlertController(title: "Image Saved", message:"Screen Saved to Photo Gallery", preferredStyle: UIAlertControllerStyle.Alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        // Show alert
+        let alertController = UIAlertController(title: "Image Saved", message:"Screen Saved to Photo Gallery", preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .Default, handler: nil))
         self.presentViewController(alertController, animated: true, completion: nil)
-    }
-    
-    func randomOriginPoint() -> CGPoint {
-        
-        let screenWidth = UInt32(self.view.frame.size.width / 3)
-        return CGPointMake(CGFloat(arc4random_uniform(screenWidth)), CGFloat(arc4random_uniform(screenWidth)))
     }
     
 }
