@@ -28,13 +28,14 @@ class ViewController: UIViewController {
         
         let backCamera = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
         
-        var error: NSError?
-        var input: AVCaptureDeviceInput!
+        var error : NSError?
+        var input: AVCaptureDeviceInput?
+        
         do {
             input = try AVCaptureDeviceInput(device: backCamera)
-        } catch let error1 as NSError {
-            error = error1
+        } catch let e as NSError {
             input = nil
+            error = e
         }
         
         if error == nil && captureSession.canAddInput(input) {

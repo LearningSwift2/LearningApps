@@ -57,13 +57,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iNE-CM-Xcu" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="3oU-zd-2y2"/>
+                            <constraint firstItem="eJD-Yy-5Rt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="6iL-FS-R7l"/>
                             <constraint firstItem="iNE-CM-Xcu" firstAttribute="width" secondItem="eJD-Yy-5Rt" secondAttribute="width" id="EVT-bF-nwf"/>
                             <constraint firstItem="eJD-Yy-5Rt" firstAttribute="width" secondItem="7ag-Cb-Osb" secondAttribute="width" id="I9D-D2-fHa"/>
                             <constraint firstItem="dO6-NE-1lj" firstAttribute="top" secondItem="iNE-CM-Xcu" secondAttribute="bottom" constant="20" id="Mb4-TX-rd0"/>
                             <constraint firstItem="eJD-Yy-5Rt" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="MbQ-OW-cck"/>
                             <constraint firstItem="iNE-CM-Xcu" firstAttribute="height" secondItem="eJD-Yy-5Rt" secondAttribute="height" id="ak7-sP-xcV"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dO6-NE-1lj" secondAttribute="bottom" constant="20" id="dad-DI-LUS"/>
-                            <constraint firstItem="eJD-Yy-5Rt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="gII-PC-R3W"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dO6-NE-1lj" secondAttribute="bottom" constant="20" id="dMd-D3-sEF"/>
                             <constraint firstItem="iNE-CM-Xcu" firstAttribute="top" secondItem="eJD-Yy-5Rt" secondAttribute="bottom" constant="22" id="kLo-K3-A84"/>
                             <constraint firstItem="dO6-NE-1lj" firstAttribute="centerX" secondItem="7ag-Cb-Osb" secondAttribute="centerX" id="rSw-RZ-hNT"/>
                         </constraints>
