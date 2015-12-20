@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="startDownload" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbO-rm-s7r"/>
+                                    <action selector="startStopDownload" destination="BYZ-38-t0r" eventType="touchUpInside" id="twW-3b-d81"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,10 +81,10 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="downloadButton" destination="tsz-s8-AuJ" id="ZsN-xR-n6E"/>
-                        <outlet property="progressLabel" destination="fq7-vx-e3o" id="c8G-iz-fw1"/>
-                        <outlet property="progressView" destination="7fD-1u-GHR" id="ZCs-SZ-f91"/>
-                        <outlet property="statusLabel" destination="wbv-Oh-1PL" id="7m3-TJ-XFJ"/>
+                        <outlet property="downloadButton" destination="tsz-s8-AuJ" id="yKv-xc-Mc5"/>
+                        <outlet property="progressLabel" destination="fq7-vx-e3o" id="XOt-Rs-RYl"/>
+                        <outlet property="progressView" destination="7fD-1u-GHR" id="dJb-9c-muF"/>
+                        <outlet property="statusLabel" destination="wbv-Oh-1PL" id="ViD-83-mqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
