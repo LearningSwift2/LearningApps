@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleDownloadWithProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq7-vx-e3o">
+                                <rect key="frame" x="231" y="72" width="138" height="135.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="99"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="7fD-1u-GHR">
+                                <rect key="frame" x="75" y="240" width="450" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Bfc-n9-6mC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bfc-n9-6mC"/>
+                                    </mask>
+                                </variation>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbv-Oh-1PL">
+                                <rect key="frame" x="209" y="467" width="182" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tsz-s8-AuJ">
+                                <rect key="frame" x="150" y="331" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.82352941180000006" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8XU-fv-97I"/>
+                                    <constraint firstAttribute="height" constant="60" id="Iim-4a-AKf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Start Download">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startStopDownload" destination="BYZ-38-t0r" eventType="touchUpInside" id="twW-3b-d81"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wbv-Oh-1PL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Qp-yw-eDA"/>
+                            <constraint firstItem="tsz-s8-AuJ" firstAttribute="top" secondItem="fq7-vx-e3o" secondAttribute="bottom" constant="123" id="4ub-JW-Z4x"/>
+                            <constraint firstItem="7fD-1u-GHR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Zj-ap-Zzf"/>
+                            <constraint firstItem="7fD-1u-GHR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PEM-mo-8kD"/>
+                            <constraint firstItem="7fD-1u-GHR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="UT7-3h-MOI"/>
+                            <constraint firstItem="fq7-vx-e3o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="azk-VK-AZn"/>
+                            <constraint firstItem="fq7-vx-e3o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dE0-bu-dyu"/>
+                            <constraint firstItem="fq7-vx-e3o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="52" id="hYV-ar-BtC"/>
+                            <constraint firstItem="fq7-vx-e3o" firstAttribute="centerY" secondItem="7fD-1u-GHR" secondAttribute="centerY" id="hd8-ML-yQb"/>
+                            <constraint firstItem="tsz-s8-AuJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nvw-Gd-RRM"/>
+                            <constraint firstItem="7fD-1u-GHR" firstAttribute="top" secondItem="fq7-vx-e3o" secondAttribute="bottom" constant="32.5" id="sAa-Iw-OSx"/>
+                            <constraint firstItem="wbv-Oh-1PL" firstAttribute="top" secondItem="tsz-s8-AuJ" secondAttribute="bottom" constant="76" id="uAP-vR-ioy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="azk-VK-AZn"/>
+                                <exclude reference="hd8-ML-yQb"/>
+                                <exclude reference="8Zj-ap-Zzf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="downloadButton" destination="tsz-s8-AuJ" id="yKv-xc-Mc5"/>
+                        <outlet property="progressLabel" destination="fq7-vx-e3o" id="XOt-Rs-RYl"/>
+                        <outlet property="progressView" destination="7fD-1u-GHR" id="dJb-9c-muF"/>
+                        <outlet property="statusLabel" destination="wbv-Oh-1PL" id="ViD-83-mqI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="21"/>
+        </scene>
+    </scenes>
+</document>
