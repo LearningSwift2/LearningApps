@@ -6,4 +6,13 @@
 //  Copyright © 2015 Touchopia. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct Video {
+    
+    let videoId: String
+    let title: String
+    let description: String
+    
+}
+

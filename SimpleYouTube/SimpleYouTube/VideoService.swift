@@ -8,8 +8,17 @@
 
 import UIKit
 
-class VideoModel: NSObject {
+class VideoService: NSObject {
     
+    func getVideos() -> [Video] {
     
+        var videos = [Video]()
+        
+        let video = Video(videoId: "CuM678WXs0c", title: "How to Change Your Frequency", description: "When you change your personal energy frequency you literally start to change your life. In her training on Consciousness Engineering program Christie Marie Sheldon teaches how to remove false childhood beliefs")
+        
+        videos.append(video)
+        
+        return videos
+    }
 
 }
