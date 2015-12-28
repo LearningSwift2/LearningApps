@@ -10,14 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var toolbarView: UIView!
-    
-    @IBOutlet weak var containerView: UIView!
-    
-    @IBOutlet weak var frameImgView: UIImageView!
-    
-    @IBOutlet weak var framesButtOutlet: UIButton!
-    
     @IBOutlet weak var framesView: UIView!
     
     @IBOutlet weak var framesScrollView: UIScrollView!
@@ -28,18 +20,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setFramesMenu()
-        showFramesView()
+        setupUI()
     }
     
-    // MARK: - SETUP FRAMES MENU
-    func setFramesMenu() {
+    func setupUI() {
         
         // Variables for setting the Filter Buttons and Labels
         var xCoord: CGFloat = 0
         let yCoord: CGFloat = 10
-        let buttonWidth:CGFloat = 50
-        let buttonHeight: CGFloat = 50
+        let buttonWidth:CGFloat = 100
+        let buttonHeight: CGFloat = 100
         let gapBetweenButtons: CGFloat = 5
         
         // Counter
@@ -55,7 +45,7 @@ class ViewController: UIViewController {
             frameButtons?.tag = frameTag
             frameButtons?.showsTouchWhenHighlighted = true
             frameButtons?.setBackgroundImage(UIImage (named: framesImageStr), forState: UIControlState.Normal)
-            frameButtons?.addTarget(self, action: "frameButtTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+            frameButtons?.addTarget(self, action: "buttonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
             
             // Add Buttons & Labels based on xCood
             xCoord +=  buttonWidth + gapBetweenButtons
@@ -68,27 +58,8 @@ class ViewController: UIViewController {
         print(framesScrollView.contentSize)
     }
     
-    
-    func frameButtTapped(button: UIButton) {
-        frameImgView.image = UIImage(named: "frame\(button.tag)")
-    }
-
-
-    func showFramesView() {
-        framesButtOutlet.backgroundColor = UIColor(red: 201.0/255.0, green: 91.0/255.0, blue: 96.0/255.0, alpha: 1.0)
-        
-        UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.framesView.frame.origin.y = self.toolbarView.frame.origin.y - self.framesView.frame.size.height
-            }, completion: { (finished: Bool) in
-        })
-    }
-    func hideFramesView() {
-        framesButtOutlet.backgroundColor = UIColor.clearColor()
-        
-        UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.framesView.frame.origin.y = self.view.frame.size.height
-            }, completion: { (finished: Bool) in
-        })
+    func buttonTapped(sender: UIButton) {
+        print("buttonTapped")
     }
 
 }
