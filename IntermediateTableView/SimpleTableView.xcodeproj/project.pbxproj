@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03B924A51C37343800721CB7 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B924A41C37343800721CB7 /* MovieTableViewController.swift */; };
+		036777581C372F3E004C050F /* UIImageView+LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036777571C372F3E004C050F /* UIImageView+LoadImage.swift */; };
+		5E72B8F41C372AA1009C8608 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E72B8F31C372AA1009C8608 /* DetailViewController.swift */; };
 		5EC6AE3D1C13A40900A62AB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE3C1C13A40900A62AB6 /* AppDelegate.swift */; };
 		5EC6AE421C13A40900A62AB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC6AE401C13A40900A62AB6 /* Main.storyboard */; };
 		5EC6AE441C13A40900A62AB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC6AE431C13A40900A62AB6 /* Assets.xcassets */; };
 		5EC6AE471C13A40900A62AB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC6AE451C13A40900A62AB6 /* LaunchScreen.storyboard */; };
+		5EC6AE511C13A41500A62AB6 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE4E1C13A41500A62AB6 /* Movie.swift */; };
+		5EC6AE521C13A41500A62AB6 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE4F1C13A41500A62AB6 /* MovieCell.swift */; };
+		5EC6AE531C13A41500A62AB6 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE501C13A41500A62AB6 /* MovieService.swift */; };
+		5EC6AE551C13A47E00A62AB6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE541C13A47E00A62AB6 /* APIManager.swift */; };
+		5EC6AE571C13A4B900A62AB6 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6AE561C13A4B900A62AB6 /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03B924A41C37343800721CB7 /* MovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
+		036777571C372F3E004C050F /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
+		5E72B8F31C372AA1009C8608 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5EC6AE391C13A40900A62AB6 /* SimpleTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC6AE3C1C13A40900A62AB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC6AE411C13A40900A62AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC6AE431C13A40900A62AB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC6AE461C13A40900A62AB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EC6AE481C13A40900A62AB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC6AE4E1C13A41500A62AB6 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		5EC6AE4F1C13A41500A62AB6 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		5EC6AE501C13A41500A62AB6 /* MovieService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		5EC6AE541C13A47E00A62AB6 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		5EC6AE561C13A4B900A62AB6 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +67,13 @@
 			isa = PBXGroup;
 			children = (
 				5EC6AE3C1C13A40900A62AB6 /* AppDelegate.swift */,
-				03B924A41C37343800721CB7 /* MovieTableViewController.swift */,
+				5EC6AE561C13A4B900A62AB6 /* MovieViewController.swift */,
+				5E72B8F31C372AA1009C8608 /* DetailViewController.swift */,
+				5EC6AE4F1C13A41500A62AB6 /* MovieCell.swift */,
+				5EC6AE4E1C13A41500A62AB6 /* Movie.swift */,
+				5EC6AE541C13A47E00A62AB6 /* APIManager.swift */,
+				5EC6AE501C13A41500A62AB6 /* MovieService.swift */,
+				036777571C372F3E004C050F /* UIImageView+LoadImage.swift */,
 				5EC6AE401C13A40900A62AB6 /* Main.storyboard */,
 				5EC6AE431C13A40900A62AB6 /* Assets.xcassets */,
 				5EC6AE451C13A40900A62AB6 /* LaunchScreen.storyboard */,
@@ -135,8 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B924A51C37343800721CB7 /* MovieTableViewController.swift in Sources */,
 				5EC6AE3D1C13A40900A62AB6 /* AppDelegate.swift in Sources */,
+				5EC6AE511C13A41500A62AB6 /* Movie.swift in Sources */,
+				5EC6AE551C13A47E00A62AB6 /* APIManager.swift in Sources */,
+				5EC6AE521C13A41500A62AB6 /* MovieCell.swift in Sources */,
+				5EC6AE531C13A41500A62AB6 /* MovieService.swift in Sources */,
+				5EC6AE571C13A4B900A62AB6 /* MovieViewController.swift in Sources */,
+				036777581C372F3E004C050F /* UIImageView+LoadImage.swift in Sources */,
+				5E72B8F41C372AA1009C8608 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

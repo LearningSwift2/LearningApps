@@ -8,9 +8,10 @@
 
 import Foundation
 
-class HTTPRequest {
+class APIManager {
 
     var session: NSURLSession = NSURLSession.sharedSession()
+    
     let url: NSURL
     
     typealias JSONDictionaryCompletion = ([String:AnyObject]?) -> Void

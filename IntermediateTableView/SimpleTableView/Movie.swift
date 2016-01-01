@@ -21,12 +21,17 @@ struct Movie {
     let voteAverage: Double?
     let voteCount: Int?
     
+    var posterImageView : UIImageView?
+    
     init(jsonDictionary: [String:AnyObject]) {
         
         self.movieID = jsonDictionary["id"] as? Int
         
         if let path = jsonDictionary["poster_path"] as? String {
             self.posterPath = "\(movieImageURL)\(path)"
+            let imageView = UIImageView()
+            imageView.loadImageFromURL(NSURL(string: path)!)
+            self.posterImageView = imageView
         } else {
             self.posterPath = ""
         }

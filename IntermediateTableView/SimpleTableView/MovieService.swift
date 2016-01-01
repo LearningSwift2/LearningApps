@@ -25,9 +25,9 @@ struct MovieService {
             return
         }
         
-        let request = HTTPRequest(url: movieURL)
+        let manager = APIManager(url: movieURL)
         
-        request.GET { (let jsonDictionary) in
+        manager.GET { (let jsonDictionary) in
 
             var movies = [Movie]()
             
