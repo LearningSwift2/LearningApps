@@ -8,7 +8,7 @@
         <!--Movie Table View Controller-->
         <scene sceneID="aPb-wW-UmF">
             <objects>
-                <tableViewController id="tgp-IQ-go4" customClass="MovieTableViewController" customModule="SimpleTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="tgp-IQ-go4" customClass="MovieTableViewController" customModule="SimpleTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="C87-YE-g9s">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

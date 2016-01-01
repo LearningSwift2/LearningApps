@@ -10,10 +10,13 @@ import UIKit
 
 class MovieTableViewController: UITableViewController {
     
-    var movies = ["One", "Two", "Three"]
+    var movies = ["Star Wars IV - A new hope", "Star Wars V - The Empire Strikes Back", "Star Wars III = Revenge of the Sith"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        // Adjust for status bar
+        self.tableView.contentInset = UIEdgeInsets(top: 44, left: 0, bottom: 0, right: 0)
 
     }
 
