@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleUploadImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eh2-Ph-lqe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5dZ-x6-LEd">
+                                <rect key="frame" x="20" y="20" width="560" height="300"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5je-CL-Oh4"/>
+                                    <constraint firstAttribute="height" constant="300" id="oi8-DZ-NJB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5je-CL-Oh4"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vdf-J7-Bfq">
+                                <rect key="frame" x="8" y="444" width="584" height="2"/>
+                                <color key="progressTintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="trackTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqL-a9-8mf">
+                                <rect key="frame" x="286" y="466" width="28" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDi-Av-FIk">
+                                <rect key="frame" x="200" y="340" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="v1u-1V-bn9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJG-Cc-nOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vdf-J7-Bfq" firstAttribute="top" secondItem="EDi-Av-FIk" secondAttribute="bottom" constant="74" id="6OX-5O-Ph9"/>
+                            <constraint firstItem="nqL-a9-8mf" firstAttribute="top" secondItem="Vdf-J7-Bfq" secondAttribute="bottom" constant="20" id="7rb-O7-odr"/>
+                            <constraint firstItem="5dZ-x6-LEd" firstAttribute="leading" secondItem="eh2-Ph-lqe" secondAttribute="leading" id="8FU-2U-5dt"/>
+                            <constraint firstAttribute="trailing" secondItem="5dZ-x6-LEd" secondAttribute="trailing" id="K11-hB-C4w"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5dZ-x6-LEd" secondAttribute="trailing" id="NHQ-6f-p7E"/>
+                            <constraint firstItem="5dZ-x6-LEd" firstAttribute="leading" secondItem="eh2-Ph-lqe" secondAttribute="leadingMargin" id="Nce-Vv-I4J"/>
+                            <constraint firstItem="5dZ-x6-LEd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="O9f-WB-48h"/>
+                            <constraint firstItem="EDi-Av-FIk" firstAttribute="top" secondItem="5dZ-x6-LEd" secondAttribute="bottom" constant="20" id="Z4e-Im-Kri"/>
+                            <constraint firstItem="Vdf-J7-Bfq" firstAttribute="leading" secondItem="eh2-Ph-lqe" secondAttribute="leading" constant="8" id="f2z-SQ-20e"/>
+                            <constraint firstItem="EDi-Av-FIk" firstAttribute="centerX" secondItem="eh2-Ph-lqe" secondAttribute="centerX" id="g01-KV-Cl1"/>
+                            <constraint firstItem="nqL-a9-8mf" firstAttribute="centerX" secondItem="eh2-Ph-lqe" secondAttribute="centerX" id="gLi-N1-XSR"/>
+                            <constraint firstItem="EDi-Av-FIk" firstAttribute="top" secondItem="5dZ-x6-LEd" secondAttribute="bottom" constant="20" id="nfh-Kc-TfF"/>
+                            <constraint firstItem="EDi-Av-FIk" firstAttribute="top" secondItem="5dZ-x6-LEd" secondAttribute="bottom" constant="20" id="oiH-hF-Ifb"/>
+                            <constraint firstAttribute="trailing" secondItem="Vdf-J7-Bfq" secondAttribute="trailing" constant="8" id="wJ9-HJ-V0X"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8FU-2U-5dt"/>
+                                <exclude reference="K11-hB-C4w"/>
+                                <exclude reference="Z4e-Im-Kri"/>
+                                <exclude reference="nfh-Kc-TfF"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="5dZ-x6-LEd" id="nVb-BM-m82"/>
+                        <outlet property="progressLabel" destination="nqL-a9-8mf" id="NqL-GN-qXF"/>
+                        <outlet property="progressView" destination="Vdf-J7-Bfq" id="vLb-Ra-5hD"/>
+                        <outlet property="uploadButton" destination="EDi-Av-FIk" id="uct-2j-0A2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
