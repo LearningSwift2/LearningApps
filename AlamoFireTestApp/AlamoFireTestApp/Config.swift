@@ -7,3 +7,6 @@
 //
 
 import Foundation
+
+let API_KEY = "noYav56JVxoeS05D8vPsZYkk7phhi6SwBPeTNQbh"
+let baseURL = "https://api.500px.com/v1"

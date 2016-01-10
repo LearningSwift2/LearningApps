@@ -15,6 +15,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Alamofire.request(.GET, baseURL + "/photos", parameters: ["consumer_key": API_KEY])
+            .responseJSON { response in
+                debugPrint(response)
+        }
 
         Alamofire.request(.GET, "https://httpbin.org/image/png")
             .responseImage { response in
@@ -26,8 +31,10 @@ class ViewController: UIViewController {
                 
                 if let image = response.result.value {
                     
-                    self.imgView.image = image
-                    print("image downloaded: \(image)")
+                    dispatch_async(dispatch_get_main_queue()){
+                        self.imgView.image = image
+                        print("image downloaded")
+                    }
                 }
         }
         
