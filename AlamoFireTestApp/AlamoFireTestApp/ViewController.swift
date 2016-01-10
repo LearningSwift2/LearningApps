@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        Alamofire.request(.GET, "https://httpbin.org/image/png")
+            .responseImage { response in
+                debugPrint(response)
+                
+                print(response.request)
+                print(response.response)
+                debugPrint(response.result)
+                
+                if let image = response.result.value {
+                    
+                    self.imgView.image = image
+                    print("image downloaded: \(image)")
+                }
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
