@@ -12,6 +12,7 @@
 		5E9949591C1EFF42008D592E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9949571C1EFF42008D592E /* Main.storyboard */; };
 		5E99495B1C1EFF42008D592E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E99495A1C1EFF42008D592E /* Assets.xcassets */; };
 		5E99495E1C1EFF42008D592E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E99495C1C1EFF42008D592E /* LaunchScreen.storyboard */; };
+		5EE90CD51C41DCDC00131D0D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE90CD41C41DCDC00131D0D /* Config.swift */; };
 		F7ACBBDDFA90486BDA5FFED7 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF078F166799841DB732B25 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		5E99495A1C1EFF42008D592E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E99495D1C1EFF42008D592E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E99495F1C1EFF42008D592E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EE90CD41C41DCDC00131D0D /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		A955F7E0B7115C5CF67D1F83 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				5E9949531C1EFF42008D592E /* AppDelegate.swift */,
+				5EE90CD41C41DCDC00131D0D /* Config.swift */,
 				5E9949551C1EFF42008D592E /* ViewController.swift */,
 				5E9949571C1EFF42008D592E /* Main.storyboard */,
 				5E99495A1C1EFF42008D592E /* Assets.xcassets */,
@@ -212,6 +215,7 @@
 			files = (
 				5E9949561C1EFF42008D592E /* ViewController.swift in Sources */,
 				5E9949541C1EFF42008D592E /* AppDelegate.swift in Sources */,
+				5EE90CD51C41DCDC00131D0D /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
