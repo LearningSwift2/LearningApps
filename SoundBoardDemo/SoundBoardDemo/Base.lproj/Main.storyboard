@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Stjldbl1.ttf">
+            <string>StarJediLogoDoubleLine1</string>
+            <string>StarJediLogoDoubleLine1</string>
+            <string>StarJediLogoDoubleLine1</string>
+            <string>StarJediLogoDoubleLine1</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SoundBoardDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sTA-9z-3fV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wZS-vZ-4f8">
+                                <rect key="frame" x="124" y="89" width="348" height="422"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-6k-P6s">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="68"/>
+                                        <fontDescription key="fontDescription" name="StarJediLogoDoubleLine1" family="Star Jedi Logo DoubleLine1" pointSize="44"/>
+                                        <state key="normal" title="Chewy"/>
+                                        <connections>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2MU-JE-alP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdt-Wf-R3D">
+                                        <rect key="frame" x="0.0" y="118" width="348" height="68"/>
+                                        <fontDescription key="fontDescription" name="StarJediLogoDoubleLine1" family="Star Jedi Logo DoubleLine1" pointSize="44"/>
+                                        <state key="normal" title="Disturbence"/>
+                                        <connections>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsd-pd-SAk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="heK-Xp-I0D">
+                                        <rect key="frame" x="0.0" y="236" width="348" height="68"/>
+                                        <fontDescription key="fontDescription" name="StarJediLogoDoubleLine1" family="Star Jedi Logo DoubleLine1" pointSize="44"/>
+                                        <state key="normal" title="Droid"/>
+                                        <connections>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5eC-La-yOX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jo3-Hy-b30">
+                                        <rect key="frame" x="0.0" y="354" width="348" height="68"/>
+                                        <fontDescription key="fontDescription" name="StarJediLogoDoubleLine1" family="Star Jedi Logo DoubleLine1" pointSize="44"/>
+                                        <state key="normal" title="Darth vader"/>
+                                        <connections>
+                                            <action selector="playSound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d88-XD-oSV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sTA-9z-3fV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H7Z-m8-52H"/>
+                            <constraint firstItem="sTA-9z-3fV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tm2-Ht-ufu"/>
+                            <constraint firstItem="wZS-vZ-4f8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="f63-ID-eAF"/>
+                            <constraint firstItem="wZS-vZ-4f8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t6c-5b-raf"/>
+                            <constraint firstItem="sTA-9z-3fV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="x5B-hv-D4U"/>
+                            <constraint firstItem="sTA-9z-3fV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="zj1-DD-fJt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="-205"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1000" height="606"/>
+    </resources>
+</document>

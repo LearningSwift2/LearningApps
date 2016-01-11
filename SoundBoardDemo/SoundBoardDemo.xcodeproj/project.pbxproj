@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5EF757CF1C432C6800E7FA74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF757CE1C432C6800E7FA74 /* AppDelegate.swift */; };
+		5EF757D11C432C6800E7FA74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF757D01C432C6800E7FA74 /* ViewController.swift */; };
+		5EF757D41C432C6800E7FA74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757D21C432C6800E7FA74 /* Main.storyboard */; };
+		5EF757D61C432C6800E7FA74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757D51C432C6800E7FA74 /* Assets.xcassets */; };
+		5EF757D91C432C6800E7FA74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757D71C432C6800E7FA74 /* LaunchScreen.storyboard */; };
+		5EF757EE1C432D1E00E7FA74 /* chewy_roar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757EA1C432D1E00E7FA74 /* chewy_roar.wav */; };
+		5EF757EF1C432D1E00E7FA74 /* disturbence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757EB1C432D1E00E7FA74 /* disturbence.wav */; };
+		5EF757F01C432D1E00E7FA74 /* R2D2-do.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757EC1C432D1E00E7FA74 /* R2D2-do.wav */; };
+		5EF757F11C432D1E00E7FA74 /* swvader02.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757ED1C432D1E00E7FA74 /* swvader02.wav */; };
+		5EF757F51C4333C300E7FA74 /* Stjldbl1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5EF757F41C4333C300E7FA74 /* Stjldbl1.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5EF757CB1C432C6800E7FA74 /* SoundBoardDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundBoardDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF757CE1C432C6800E7FA74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5EF757D01C432C6800E7FA74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EF757D31C432C6800E7FA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5EF757D51C432C6800E7FA74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5EF757D81C432C6800E7FA74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5EF757DA1C432C6800E7FA74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF757EA1C432D1E00E7FA74 /* chewy_roar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chewy_roar.wav; sourceTree = "<group>"; };
+		5EF757EB1C432D1E00E7FA74 /* disturbence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = disturbence.wav; sourceTree = "<group>"; };
+		5EF757EC1C432D1E00E7FA74 /* R2D2-do.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "R2D2-do.wav"; sourceTree = "<group>"; };
+		5EF757ED1C432D1E00E7FA74 /* swvader02.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = swvader02.wav; sourceTree = "<group>"; };
+		5EF757F41C4333C300E7FA74 /* Stjldbl1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stjldbl1.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5EF757C81C432C6800E7FA74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5EF757C21C432C6800E7FA74 = {
+			isa = PBXGroup;
+			children = (
+				5EF757CD1C432C6800E7FA74 /* SoundBoardDemo */,
+				5EF757CC1C432C6800E7FA74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5EF757CC1C432C6800E7FA74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EF757CB1C432C6800E7FA74 /* SoundBoardDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5EF757CD1C432C6800E7FA74 /* SoundBoardDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5EF757CE1C432C6800E7FA74 /* AppDelegate.swift */,
+				5EF757D01C432C6800E7FA74 /* ViewController.swift */,
+				5EF757D21C432C6800E7FA74 /* Main.storyboard */,
+				5EF757D51C432C6800E7FA74 /* Assets.xcassets */,
+				5EF757D71C432C6800E7FA74 /* LaunchScreen.storyboard */,
+				5EF757DA1C432C6800E7FA74 /* Info.plist */,
+				5EF757E91C432D1E00E7FA74 /* sounds */,
+				5EF757F31C4333C300E7FA74 /* font */,
+			);
+			path = SoundBoardDemo;
+			sourceTree = "<group>";
+		};
+		5EF757E91C432D1E00E7FA74 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				5EF757EA1C432D1E00E7FA74 /* chewy_roar.wav */,
+				5EF757EB1C432D1E00E7FA74 /* disturbence.wav */,
+				5EF757EC1C432D1E00E7FA74 /* R2D2-do.wav */,
+				5EF757ED1C432D1E00E7FA74 /* swvader02.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+		5EF757F31C4333C300E7FA74 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				5EF757F41C4333C300E7FA74 /* Stjldbl1.ttf */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5EF757CA1C432C6800E7FA74 /* SoundBoardDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF757DD1C432C6800E7FA74 /* Build configuration list for PBXNativeTarget "SoundBoardDemo" */;
+			buildPhases = (
+				5EF757C71C432C6800E7FA74 /* Sources */,
+				5EF757C81C432C6800E7FA74 /* Frameworks */,
+				5EF757C91C432C6800E7FA74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundBoardDemo;
+			productName = SoundBoardDemo;
+			productReference = 5EF757CB1C432C6800E7FA74 /* SoundBoardDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5EF757C31C432C6800E7FA74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Touchopia, LLC";
+				TargetAttributes = {
+					5EF757CA1C432C6800E7FA74 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 5EF757C61C432C6800E7FA74 /* Build configuration list for PBXProject "SoundBoardDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5EF757C21C432C6800E7FA74;
+			productRefGroup = 5EF757CC1C432C6800E7FA74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5EF757CA1C432C6800E7FA74 /* SoundBoardDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5EF757C91C432C6800E7FA74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF757F51C4333C300E7FA74 /* Stjldbl1.ttf in Resources */,
+				5EF757D91C432C6800E7FA74 /* LaunchScreen.storyboard in Resources */,
+				5EF757F01C432D1E00E7FA74 /* R2D2-do.wav in Resources */,
+				5EF757EE1C432D1E00E7FA74 /* chewy_roar.wav in Resources */,
+				5EF757D61C432C6800E7FA74 /* Assets.xcassets in Resources */,
+				5EF757F11C432D1E00E7FA74 /* swvader02.wav in Resources */,
+				5EF757D41C432C6800E7FA74 /* Main.storyboard in Resources */,
+				5EF757EF1C432D1E00E7FA74 /* disturbence.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5EF757C71C432C6800E7FA74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EF757D11C432C6800E7FA74 /* ViewController.swift in Sources */,
+				5EF757CF1C432C6800E7FA74 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5EF757D21C432C6800E7FA74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EF757D31C432C6800E7FA74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5EF757D71C432C6800E7FA74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5EF757D81C432C6800E7FA74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5EF757DB1C432C6800E7FA74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5EF757DC1C432C6800E7FA74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5EF757DE1C432C6800E7FA74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SoundBoardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchopia.SoundBoardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5EF757DF1C432C6800E7FA74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SoundBoardDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchopia.SoundBoardDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5EF757C61C432C6800E7FA74 /* Build configuration list for PBXProject "SoundBoardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF757DB1C432C6800E7FA74 /* Debug */,
+				5EF757DC1C432C6800E7FA74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF757DD1C432C6800E7FA74 /* Build configuration list for PBXNativeTarget "SoundBoardDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5EF757DE1C432C6800E7FA74 /* Debug */,
+				5EF757DF1C432C6800E7FA74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5EF757C31C432C6800E7FA74 /* Project object */;
+}
