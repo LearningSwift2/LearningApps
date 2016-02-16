@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kfU-FM-ceF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DxP-U5-vO2">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="QKE-dX-Tw9"/>
+                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="mTH-jh-lob"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="3"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="Xfk-hZ-3Ur">
+            <objects>
+                <viewController id="jWV-Uu-8NT" customClass="RightViewController" customModule="DrawerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0AB-n6-CU1"/>
+                        <viewControllerLayoutGuide type="bottom" id="JwL-CP-ENz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xus-jv-k3I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5EX-Gu-2cl">
+                                <rect key="frame" x="261" y="290" width="78" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5EX-Gu-2cl" firstAttribute="centerY" secondItem="Xus-jv-k3I" secondAttribute="centerY" id="7HH-RZ-5tS"/>
+                            <constraint firstItem="5EX-Gu-2cl" firstAttribute="centerX" secondItem="Xus-jv-k3I" secondAttribute="centerX" id="HfS-co-0jG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i7K-1q-3MG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1756" y="25"/>
+        </scene>
+        <!--Left View Controller-->
+        <scene sceneID="ZIU-Lf-t5t">
+            <objects>
+                <viewController id="5gT-ar-bgR" customClass="LeftViewController" customModule="DrawerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LeZ-zQ-g9t"/>
+                        <viewControllerLayoutGuide type="bottom" id="mDb-C1-Hf6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="onT-xP-RbW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Left Side" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIK-jS-22q">
+                                <rect key="frame" x="266" y="290" width="68" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hIK-jS-22q" firstAttribute="centerY" secondItem="onT-xP-RbW" secondAttribute="centerY" id="GLU-iB-iOZ"/>
+                            <constraint firstItem="hIK-jS-22q" firstAttribute="centerX" secondItem="onT-xP-RbW" secondAttribute="centerX" id="aZb-p1-wEa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcK-Xd-4cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="706"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MOT-ub-vcb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kfU-FM-ceF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMv-CN-Emz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="I2M-nx-OCB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vkk-bW-KmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="-43"/>
+        </scene>
+    </scenes>
+</document>
