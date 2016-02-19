@@ -39,7 +39,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         let status = CLAuthorizationStatus.AuthorizedWhenInUse
         
-        if status == .AuthorizedWhenInUse {
+        if status != .Denied {
             self.mapView.showsUserLocation = true
             self.locationManager.startUpdatingLocation()
         }

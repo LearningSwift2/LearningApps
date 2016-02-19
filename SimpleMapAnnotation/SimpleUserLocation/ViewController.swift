@@ -24,16 +24,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        locationManager.requestLocation()
+
+        self.updateLocationTapped()
     }
     
     @IBAction func updateLocationTapped() {
-        locationManager.requestLocation()
+
+        let status = CLAuthorizationStatus.AuthorizedWhenInUse
+        
+        if status != .Denied {
+            self.mapView.showsUserLocation = true
+            self.locationManager.requestLocation()
+        }
+        
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
-        manager.requestLocation()
+        self.updateLocationTapped()
     }
 
 
@@ -50,6 +58,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
                 self.mapView.setRegion(region, animated: true)
                 self.mapView.showsUserLocation = true
                 
+                self.createAnnotation("Apple Computer", subTitle: "", coordinate: center)
                 print("mapView updated")
             }
             
@@ -76,6 +85,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         annotation.title = title
         annotation.subtitle = subTitle
         annotation.coordinate = coordinate
+        
+        self.addAnnotationToMap(annotation)
     }
     
     func addAnnotationToMap(annotation: MKPointAnnotation) {
@@ -106,13 +117,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             
             // show Callout (true/false)
             annotationView?.canShowCallout = true
+        
+//            let leftIconView = UIImageView(frame: CGRectMake(0, 0, 57, 64))
+//            leftIconView.image = UIImage(named: "apple")
+//            annotationView?.leftCalloutAccessoryView = leftIconView
+//        
+//            // Automatically select the annotation
+//            self.mapView.selectAnnotation(annotation, animated: false)
         }
-        
-        let iconImageString = "map"
-        
-        let leftIconView = UIImageView(frame: CGRectMake(0, 0, 53, 53))
-        leftIconView.image = UIImage(named: iconImageString)
-        annotationView?.leftCalloutAccessoryView = leftIconView
         
         return annotationView
     }
