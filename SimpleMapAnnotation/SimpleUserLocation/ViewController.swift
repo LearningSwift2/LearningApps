@@ -86,11 +86,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         annotation.subtitle = subTitle
         annotation.coordinate = coordinate
         
-        self.addAnnotationToMap(annotation)
-    }
-    
-    func addAnnotationToMap(annotation: MKPointAnnotation) {
-        mapView.showAnnotations([annotation], animated: true)
+        if self.mapView != nil {
+            self.mapView.addAnnotation(annotation)
+        }
     }
     
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -118,10 +116,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
             // show Callout (true/false)
             annotationView?.canShowCallout = true
         
-//            let leftIconView = UIImageView(frame: CGRectMake(0, 0, 57, 64))
-//            leftIconView.image = UIImage(named: "apple")
-//            annotationView?.leftCalloutAccessoryView = leftIconView
-//        
+            let leftIconView = UIImageView(frame: CGRectMake(0, 0, 37, 30))
+            leftIconView.image = UIImage(named: "apple")
+            annotationView?.leftCalloutAccessoryView = leftIconView
+//
 //            // Automatically select the annotation
 //            self.mapView.selectAnnotation(annotation, animated: false)
         }
