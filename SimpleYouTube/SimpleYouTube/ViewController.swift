@@ -17,6 +17,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        var videoIDString = ""
+        
+        if let videoURL = NSURL(string: "https://www.youtube.com/watch?v=_LXiSPpfM54") {
+            if let theID = videoIDFromYouTubeURL(videoURL) {
+                videoIDString = theID
+            }
+        }
+        
+        print(videoIDString)
+        
     }
     
     //MARK: UITableViewDelegate

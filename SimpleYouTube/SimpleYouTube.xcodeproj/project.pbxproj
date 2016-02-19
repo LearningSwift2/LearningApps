@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E839F211C711A9000CBFB57 /* YouTubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E839F1F1C711A9000CBFB57 /* YouTubePlayer.swift */; };
+		5E839F221C711A9000CBFB57 /* YTPlayer.html in Resources */ = {isa = PBXBuildFile; fileRef = 5E839F201C711A9000CBFB57 /* YTPlayer.html */; };
+		5E839F241C711C9000CBFB57 /* YTTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E839F231C711C9000CBFB57 /* YTTableViewCell.swift */; };
+		5E839F261C711D0100CBFB57 /* YTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E839F251C711D0100CBFB57 /* YTViewController.swift */; };
 		5E85F5161C2370A600B84DF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85F5151C2370A600B84DF4 /* AppDelegate.swift */; };
 		5E85F5181C2370A600B84DF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E85F5171C2370A600B84DF4 /* ViewController.swift */; };
 		5E85F51B1C2370A600B84DF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E85F5191C2370A600B84DF4 /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E839F1F1C711A9000CBFB57 /* YouTubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubePlayer.swift; sourceTree = "<group>"; };
+		5E839F201C711A9000CBFB57 /* YTPlayer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = YTPlayer.html; sourceTree = "<group>"; };
+		5E839F231C711C9000CBFB57 /* YTTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTTableViewCell.swift; sourceTree = "<group>"; };
+		5E839F251C711D0100CBFB57 /* YTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTViewController.swift; sourceTree = "<group>"; };
 		5E85F5121C2370A600B84DF4 /* SimpleYouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E85F5151C2370A600B84DF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E85F5171C2370A600B84DF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,8 +68,12 @@
 			children = (
 				5E85F5151C2370A600B84DF4 /* AppDelegate.swift */,
 				5E85F5171C2370A600B84DF4 /* ViewController.swift */,
+				5E839F251C711D0100CBFB57 /* YTViewController.swift */,
 				5E85F5291C2371D800B84DF4 /* VideoService.swift */,
+				5E839F231C711C9000CBFB57 /* YTTableViewCell.swift */,
 				5E85F5271C23717B00B84DF4 /* Video.swift */,
+				5E839F1F1C711A9000CBFB57 /* YouTubePlayer.swift */,
+				5E839F201C711A9000CBFB57 /* YTPlayer.html */,
 				5E85F5191C2370A600B84DF4 /* Main.storyboard */,
 				5E85F51C1C2370A600B84DF4 /* Assets.xcassets */,
 				5E85F51E1C2370A600B84DF4 /* LaunchScreen.storyboard */,
@@ -130,6 +142,7 @@
 			files = (
 				5E85F5201C2370A600B84DF4 /* LaunchScreen.storyboard in Resources */,
 				5E85F51D1C2370A600B84DF4 /* Assets.xcassets in Resources */,
+				5E839F221C711A9000CBFB57 /* YTPlayer.html in Resources */,
 				5E85F51B1C2370A600B84DF4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E85F5181C2370A600B84DF4 /* ViewController.swift in Sources */,
+				5E839F211C711A9000CBFB57 /* YouTubePlayer.swift in Sources */,
+				5E839F261C711D0100CBFB57 /* YTViewController.swift in Sources */,
+				5E839F241C711C9000CBFB57 /* YTTableViewCell.swift in Sources */,
 				5E85F5281C23717B00B84DF4 /* Video.swift in Sources */,
 				5E85F5161C2370A600B84DF4 /* AppDelegate.swift in Sources */,
 				5E85F52A1C2371D800B84DF4 /* VideoService.swift in Sources */,
@@ -292,6 +308,7 @@
 				5E85F5261C2370A600B84DF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
