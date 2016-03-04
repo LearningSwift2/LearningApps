@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5EDD03C81C864C1D00A3B7DD"
+               BlueprintIdentifier = "5E5428561C890E7500336D58"
                BuildableName = "SimpleCoreData.app"
                BlueprintName = "SimpleCoreData"
                ReferencedContainer = "container:SimpleCoreData.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EDD03C81C864C1D00A3B7DD"
+            BlueprintIdentifier = "5E5428561C890E7500336D58"
             BuildableName = "SimpleCoreData.app"
             BlueprintName = "SimpleCoreData"
             ReferencedContainer = "container:SimpleCoreData.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EDD03C81C864C1D00A3B7DD"
+            BlueprintIdentifier = "5E5428561C890E7500336D58"
             BuildableName = "SimpleCoreData.app"
             BlueprintName = "SimpleCoreData"
             ReferencedContainer = "container:SimpleCoreData.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5EDD03C81C864C1D00A3B7DD"
+            BlueprintIdentifier = "5E5428561C890E7500336D58"
             BuildableName = "SimpleCoreData.app"
             BlueprintName = "SimpleCoreData"
             ReferencedContainer = "container:SimpleCoreData.xcodeproj">
