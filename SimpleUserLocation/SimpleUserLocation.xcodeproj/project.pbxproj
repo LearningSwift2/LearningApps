@@ -100,6 +100,7 @@
 				TargetAttributes = {
 					5E8ADEF61C73D83E00CBB3F7 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 86Z976V88Y;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -259,9 +260,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleUserLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.SimpleUserLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchopia.SimpleUserLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -270,9 +272,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SimpleUserLocation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theironyard.SimpleUserLocation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.touchopia.SimpleUserLocation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -296,6 +299,7 @@
 				5E8ADF0B1C73D83E00CBB3F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

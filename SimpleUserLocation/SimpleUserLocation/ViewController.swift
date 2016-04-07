@@ -22,10 +22,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDele
         
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        
+        print("didChangeAuthorizationStatus")
         
         manager.requestLocation()
     }
