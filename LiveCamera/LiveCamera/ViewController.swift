@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var stillImageOutput: AVCaptureStillImageOutput?
     var previewLayer: AVCaptureVideoPreviewLayer?
     
-    //MARK: - View Controller Lifecycle Methods
+    //MARK: - View Life Cycle Methods
     
     override func viewWillAppear(animated: Bool) {
         
@@ -33,9 +33,12 @@ class ViewController: UIViewController {
         
         do {
             input = try AVCaptureDeviceInput(device: backCamera)
+            
         } catch let e as NSError {
             input = nil
             error = e
+            
+            print("An error occurred \(error)")
         }
         
         if error == nil && captureSession.canAddInput(input) {
@@ -48,9 +51,13 @@ class ViewController: UIViewController {
                 captureSession.addOutput(stillImageOutput)
                 
                 if let layer = AVCaptureVideoPreviewLayer(session: captureSession) {
+                    
                     layer.videoGravity = AVLayerVideoGravityResizeAspect
+                    
                     layer.connection?.videoOrientation = AVCaptureVideoOrientation.Portrait
+                    
                     previewView.layer.addSublayer(layer)
+                    
                     previewLayer = layer
                 }
                 
@@ -71,6 +78,8 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: - Action Methods
+    
     @IBAction func didPressTakePhoto(sender: UIButton) {
         
         guard let output = stillImageOutput else {
@@ -79,17 +88,26 @@ class ViewController: UIViewController {
         }
         
         if let videoConnection = output.connectionWithMediaType(AVMediaTypeVideo) {
+            
             videoConnection.videoOrientation = AVCaptureVideoOrientation.Portrait
+            
             output.captureStillImageAsynchronouslyFromConnection(videoConnection, completionHandler: {(sampleBuffer, error) in
+                
                 if (sampleBuffer != nil) {
+                    
                     let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                    
                     let dataProvider = CGDataProviderCreateWithCFData(imageData)
+                    
                     let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true, CGColorRenderingIntent.RenderingIntentDefault)
                     
                     let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    
                     self.capturedImage.image = image
                 }
+                
             })
+        
         }
     }
     

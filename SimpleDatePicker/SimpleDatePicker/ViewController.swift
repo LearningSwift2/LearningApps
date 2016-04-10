@@ -58,8 +58,8 @@ class ViewController: UIViewController {
             datePickerIsHidden = false
             
             UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseOut, animations: {
-                self.bottomConstraint.constant += self.datePicker.frame.size.height
-                self.view.layoutIfNeeded()
+                    self.bottomConstraint.constant += self.datePicker.frame.size.height
+                    self.view.layoutIfNeeded()
                 }, completion: nil)
         }
     }
