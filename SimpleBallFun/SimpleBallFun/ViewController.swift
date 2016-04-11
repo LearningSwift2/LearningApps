@@ -10,6 +10,9 @@ import UIKit
 import QuartzCore
 
 class ViewController: UIViewController, UICollisionBehaviorDelegate {
+    
+    let leftIdentifier = "leftSide"
+    let rightIdentifier = "rightSide"
 
     let velocity: CGFloat = 1.0
     
@@ -26,9 +29,6 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
         self.view.addSubview(self.ball)
         
         self.animator = UIDynamicAnimator(referenceView: self.view)
-        
-        //let gravity = UIGravityBehavior(items: [self.ball])
-        //self.animator.addBehavior(gravity)
         
         addCollision()
         
@@ -49,24 +49,23 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
     
     func addCollision() {
         
+        let collisionBehavior = UICollisionBehavior(items: [self.ball])
+        collisionBehavior.collisionDelegate = self
+        
         let frame = self.view.frame
         
         let leftFromPoint = CGPoint(x: 0, y: 0)
         let leftToPoint = CGPoint(x: 0, y: frame.size.height)
         
+        collisionBehavior.addBoundaryWithIdentifier(leftIdentifier,
+                                                    fromPoint:leftFromPoint,
+                                                    toPoint: leftToPoint)
+
         let rightFromPoint = CGPoint(x: frame.size.width, y: 0)
         let rightToPoint = CGPoint(x: frame.size.width, y: frame.size.height)
         
         
-        let collisionBehavior = UICollisionBehavior(items: [self.ball])
-        
-        collisionBehavior.collisionDelegate = self
-        
-        collisionBehavior.addBoundaryWithIdentifier("left",
-                                                    fromPoint:leftFromPoint,
-                                                    toPoint: leftToPoint)
-        
-        collisionBehavior.addBoundaryWithIdentifier("right",
+        collisionBehavior.addBoundaryWithIdentifier(rightIdentifier,
                                                     fromPoint:  rightFromPoint,
                                                     toPoint: rightToPoint)
 
@@ -77,27 +76,19 @@ class ViewController: UIViewController, UICollisionBehaviorDelegate {
   
     func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?) {
         
-        if let idString = identifier as? String {
+        if let identifier = identifier as? String {
             
-            print(idString)
+            print(identifier)
             
-            if idString == "left" {
+            if identifier == leftIdentifier {
                 pushRight()
             }
             
-            if idString == "right" {
+            if identifier == rightIdentifier {
                 pushLeft()
             }
         }
     }
     
-    func addBoundaryView(fromPoint: CGPoint, toPoint: CGPoint, color: UIColor) {
-        
-        //let theView = UIView(frame: CGRect(origin: <#T##CGPoint#>, size: <#T##CGSize#>)
-        
-        self.view.addSubview(theView)
-    }
-    
-
 }
 
