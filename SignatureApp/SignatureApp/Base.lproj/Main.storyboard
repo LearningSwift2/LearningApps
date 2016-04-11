@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F18b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SignatureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJt-vn-UEl" customClass="SignatureView" customModule="SignatureApp" customModuleProvider="target">
+                                <rect key="frame" x="60" y="28" width="480" height="200"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="sjv-KK-Pd1"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFD-15-Udn">
+                                <rect key="frame" x="205" y="248" width="190" height="61"/>
+                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="44"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTa-Tt-Hfe">
+                                <rect key="frame" x="444" y="236" width="96" height="38"/>
+                                <color key="backgroundColor" red="0.70588235290000001" green="0.0" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNZ-lI-IPl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-Az-Bk6">
+                                <rect key="frame" x="60" y="236" width="94" height="38"/>
+                                <color key="backgroundColor" red="0.3294117647" green="0.82352941180000006" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="30" minY="10" maxX="30" maxY="10"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AzI-4I-1AV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eFD-15-Udn" firstAttribute="top" secondItem="IJt-vn-UEl" secondAttribute="bottom" constant="20" id="C4X-OD-mYA"/>
+                            <constraint firstItem="kdz-Az-Bk6" firstAttribute="leading" secondItem="IJt-vn-UEl" secondAttribute="leading" id="Gga-2G-j2g"/>
+                            <constraint firstItem="IJt-vn-UEl" firstAttribute="top" secondItem="aTa-Tt-Hfe" secondAttribute="bottom" constant="8" id="Nyx-I2-kdE"/>
+                            <constraint firstItem="aTa-Tt-Hfe" firstAttribute="top" secondItem="IJt-vn-UEl" secondAttribute="bottom" constant="8" id="WK1-Qq-eOB"/>
+                            <constraint firstItem="eFD-15-Udn" firstAttribute="centerX" secondItem="IJt-vn-UEl" secondAttribute="centerX" id="WLZ-87-MOw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aTa-Tt-Hfe" secondAttribute="trailing" constant="40" id="ZfX-UT-TIb"/>
+                            <constraint firstItem="IJt-vn-UEl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cPn-0L-m8n"/>
+                            <constraint firstItem="IJt-vn-UEl" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="gYF-4Z-BVR"/>
+                            <constraint firstItem="aTa-Tt-Hfe" firstAttribute="trailing" secondItem="IJt-vn-UEl" secondAttribute="trailing" id="hAp-la-PwW"/>
+                            <constraint firstItem="IJt-vn-UEl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="93" id="jqZ-ce-wic"/>
+                            <constraint firstItem="IJt-vn-UEl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="oaI-YG-jwN"/>
+                            <constraint firstItem="kdz-Az-Bk6" firstAttribute="top" secondItem="IJt-vn-UEl" secondAttribute="bottom" constant="8" id="r7M-d5-CZc"/>
+                            <constraint firstItem="kdz-Az-Bk6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="tDg-WM-ojB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Nyx-I2-kdE"/>
+                                <exclude reference="jqZ-ce-wic"/>
+                                <exclude reference="tDg-WM-ojB"/>
+                                <exclude reference="ZfX-UT-TIb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="signatureView" destination="IJt-vn-UEl" id="vsq-bY-5VS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="353"/>
+        </scene>
+    </scenes>
+</document>
