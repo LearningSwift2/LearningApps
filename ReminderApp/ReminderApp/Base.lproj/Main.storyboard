@@ -6,6 +6,11 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Merriweather-Regular.otf">
+            <string>Merriweather</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Reminder View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -183,29 +188,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBD-mp-zlz">
-                                                    <rect key="frame" x="16" y="12" width="36" height="19.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:35AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIx-mF-eP8">
                                                     <rect key="frame" x="532.5" y="13.5" width="51.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AP9-sA-cGm">
+                                                    <rect key="frame" x="8" y="7.5" width="504.5" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Merriweather" family="Merriweather" pointSize="14"/>
+                                                    <state key="normal" title="Tap To Change"/>
+                                                    <connections>
+                                                        <action selector="toggleDatePicker" destination="6Ac-eG-ddA" eventType="touchUpInside" id="tvv-0b-S2k"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="KIx-mF-eP8" firstAttribute="centerY" secondItem="EJA-pI-taw" secondAttribute="centerY" id="NpU-AA-dPW"/>
+                                                <constraint firstItem="AP9-sA-cGm" firstAttribute="leading" secondItem="EJA-pI-taw" secondAttribute="leading" constant="8" id="XAT-LC-tXl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="KIx-mF-eP8" secondAttribute="trailing" constant="8" id="Xou-fn-usN"/>
-                                                <constraint firstItem="bBD-mp-zlz" firstAttribute="centerY" secondItem="EJA-pI-taw" secondAttribute="centerY" id="aWm-LU-JeC"/>
-                                                <constraint firstItem="bBD-mp-zlz" firstAttribute="leading" secondItem="EJA-pI-taw" secondAttribute="leadingMargin" constant="8" id="kcR-RP-af1"/>
+                                                <constraint firstItem="KIx-mF-eP8" firstAttribute="leading" secondItem="AP9-sA-cGm" secondAttribute="trailing" constant="20" id="YH6-42-bIC"/>
+                                                <constraint firstItem="AP9-sA-cGm" firstAttribute="centerY" secondItem="EJA-pI-taw" secondAttribute="centerY" id="s0I-pC-xKC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="timeLabel" destination="KIx-mF-eP8" id="MuG-Jk-abd"/>
-                                            <outlet property="timeTextLabel" destination="bBD-mp-zlz" id="m5I-5h-0aD"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DateCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCell" rowHeight="225" id="3yz-Yo-0FN" customClass="DateTableViewCell" customModule="ReminderApp" customModuleProvider="target">
@@ -220,6 +227,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="481828723.83270299">
                                                         <!--2016-04-08 17:18:43 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerValueChanged:" destination="3yz-Yo-0FN" eventType="valueChanged" id="XOi-U9-9qI"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -230,7 +240,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="datePicker" destination="ZVF-aW-4wH" id="sdk-pF-bxp"/>
+                                            <outlet property="datePicker" destination="Exs-gE-Clc" id="jpi-XG-U9t"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

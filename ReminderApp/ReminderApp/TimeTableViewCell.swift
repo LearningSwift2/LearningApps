@@ -9,8 +9,7 @@
 import UIKit
 
 class TimeTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var timeTextLabel: UILabel!
+    
     @IBOutlet weak var timeLabel: UILabel!
     
     override func awakeFromNib() {
@@ -21,8 +20,6 @@ class TimeTableViewCell: UITableViewCell {
         
         self.timeLabel.font = ThemeManager.sharedInstance.defaultFont()
         self.timeLabel.text = timeString
-        self.timeTextLabel.font = ThemeManager.sharedInstance.defaultFont()
-        self.timeTextLabel.text = titleString
         
         self.layoutIfNeeded()
     }
