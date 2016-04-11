@@ -18,6 +18,7 @@ class TimeTableViewCell: UITableViewCell {
     }
     
     func configureCell(titleString: String, timeString: String) {
+        
         self.timeLabel.font = ThemeManager.sharedInstance.defaultFont()
         self.timeLabel.text = timeString
         self.timeTextLabel.font = ThemeManager.sharedInstance.defaultFont()

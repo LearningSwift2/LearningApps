@@ -37,7 +37,7 @@ extension UIImageView {
                     }
                 })
             } else {
-                print("Error: \(error?.localizedDescription)")
+                //print("Error: \(error?.localizedDescription)")
             }
         })
         task.resume()

@@ -20,7 +20,7 @@ class ReminderTableViewCell: UITableViewCell {
     
     func configureCell(text: String) {
         self.reminderLabel.font = ThemeManager.sharedInstance.defaultFont()
-        self.reminderLabel.text = text
+        self.reminderLabel.text = "Text"
         
         self.layoutIfNeeded()
     }

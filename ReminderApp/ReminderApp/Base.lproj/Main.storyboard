@@ -208,6 +208,31 @@
                                             <outlet property="timeTextLabel" destination="bBD-mp-zlz" id="m5I-5h-0aD"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DateCell" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCell" rowHeight="225" id="3yz-Yo-0FN" customClass="DateTableViewCell" customModule="ReminderApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="600" height="225"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3yz-Yo-0FN" id="ZVF-aW-4wH">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="224.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Exs-gE-Clc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="224.5"/>
+                                                    <date key="date" timeIntervalSinceReferenceDate="481828723.83270299">
+                                                        <!--2016-04-08 17:18:43 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Exs-gE-Clc" secondAttribute="trailing" id="6HK-v4-xRP"/>
+                                                <constraint firstItem="Exs-gE-Clc" firstAttribute="leading" secondItem="ZVF-aW-4wH" secondAttribute="leading" id="7sH-Ak-xi6"/>
+                                                <constraint firstAttribute="bottom" secondItem="Exs-gE-Clc" secondAttribute="bottom" id="ZeK-W9-3tc"/>
+                                                <constraint firstItem="Exs-gE-Clc" firstAttribute="top" secondItem="ZVF-aW-4wH" secondAttribute="top" id="vtb-Iz-jBR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePicker" destination="ZVF-aW-4wH" id="sdk-pF-bxp"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="6Ac-eG-ddA" id="jdc-SP-V9B"/>

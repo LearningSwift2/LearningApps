@@ -16,8 +16,9 @@ struct ThemeFont {
 
 class ThemeManager {
     
-    // Singleton
+    // Setup ThemeManager as Singleton
     static let sharedInstance = ThemeManager()
+    
     private init() {}
     
     func defaultFont() -> UIFont? {
@@ -27,4 +28,5 @@ class ThemeManager {
     func defaultBoldFont() -> UIFont? {
         return UIFont(name: ThemeFont.defaultBoldFontName, size: ThemeFont.defaultFontSize)
     }
+    
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-    let movieImageURL = "http://image.tmdb.org/t/p/w500/"
+let movieImageURL = "http://image.tmdb.org/t/p/w500/"
 
 struct Movie {
     
