@@ -12,7 +12,9 @@
 		5E0BC30E1CB60DD80075B6AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BC30C1CB60DD80075B6AC /* Main.storyboard */; };
 		5E0BC3101CB60DD80075B6AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BC30F1CB60DD80075B6AC /* Assets.xcassets */; };
 		5E0BC3131CB60DD80075B6AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BC3111CB60DD80075B6AC /* LaunchScreen.storyboard */; };
-		5E0BC31B1CB60E490075B6AC /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BC31A1CB60E490075B6AC /* APIClient.swift */; };
+		5E0BC31B1CB60E490075B6AC /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BC31A1CB60E490075B6AC /* FlickrAPI.swift */; };
+		5E71037D1CDC34D6000EA4BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71037C1CDC34D6000EA4BE /* Constants.swift */; };
+		5E71037F1CDC353A000EA4BE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E71037E1CDC353A000EA4BE /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +25,9 @@
 		5E0BC30F1CB60DD80075B6AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E0BC3121CB60DD80075B6AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E0BC3141CB60DD80075B6AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E0BC31A1CB60E490075B6AC /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5E0BC31A1CB60E490075B6AC /* FlickrAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		5E71037C1CDC34D6000EA4BE /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5E71037E1CDC353A000EA4BE /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				5E0BC3081CB60DD80075B6AC /* AppDelegate.swift */,
+				5E71037C1CDC34D6000EA4BE /* Constants.swift */,
 				5E0BC30A1CB60DD80075B6AC /* ViewController.swift */,
-				5E0BC31A1CB60E490075B6AC /* APIClient.swift */,
+				5E0BC31A1CB60E490075B6AC /* FlickrAPI.swift */,
+				5E71037E1CDC353A000EA4BE /* Photo.swift */,
 				5E0BC30C1CB60DD80075B6AC /* Main.storyboard */,
 				5E0BC30F1CB60DD80075B6AC /* Assets.xcassets */,
 				5E0BC3111CB60DD80075B6AC /* LaunchScreen.storyboard */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E71037F1CDC353A000EA4BE /* Photo.swift in Sources */,
+				5E71037D1CDC34D6000EA4BE /* Constants.swift in Sources */,
 				5E0BC30B1CB60DD80075B6AC /* ViewController.swift in Sources */,
-				5E0BC31B1CB60E490075B6AC /* APIClient.swift in Sources */,
+				5E0BC31B1CB60E490075B6AC /* FlickrAPI.swift in Sources */,
 				5E0BC3091CB60DD80075B6AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +301,7 @@
 				5E0BC3191CB60DD80075B6AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
