@@ -3,7 +3,7 @@
 //  SimpleScrollView
 //
 //  Created by Phil Wright on 12/12/15.
-//  Copyright © 2015 The Iron Yard. All rights reserved.
+//  Copyright © 2016 Touchopia, LLC. All rights reserved.
 //
 
 import UIKit
@@ -32,10 +32,10 @@ class ViewController: UIViewController {
         let buttonHeight: CGFloat = 100
         let gapBetweenButtons: CGFloat = 5
         
-        // Counter
-        var framesCount = 0
+        let maxFrames = 5
         
-        for framesCount = 0; framesCount < 9; ++framesCount {
+        for framesCount in 0..<maxFrames {
+            
             frameTag = framesCount
             let framesImageStr:String = "f\(frameTag)"
             
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             frameButtons?.tag = frameTag
             frameButtons?.showsTouchWhenHighlighted = true
             frameButtons?.setBackgroundImage(UIImage (named: framesImageStr), forState: UIControlState.Normal)
-            frameButtons?.addTarget(self, action: "buttonTapped:", forControlEvents: UIControlEvents.TouchUpInside)
+            frameButtons?.addTarget(self, action: #selector(ViewController.buttonTapped(_:)), forControlEvents: UIControlEvents.TouchUpInside)
             
             // Add Buttons & Labels based on xCood
             xCoord +=  buttonWidth + gapBetweenButtons
@@ -53,7 +53,7 @@ class ViewController: UIViewController {
         }
         
         // Place Buttons into the Frames ScrollView =====
-        framesScrollView.contentSize = CGSizeMake(buttonWidth * CGFloat(framesCount+1), yCoord)
+        framesScrollView.contentSize = CGSizeMake(buttonWidth * CGFloat(maxFrames+1), yCoord)
         
         print(framesScrollView.contentSize)
     }
